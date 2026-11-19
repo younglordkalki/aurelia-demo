@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurelia Dental & Aesthetics | Gurugram</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .chat-scroll::-webkit-scrollbar { width: 5px; }
+        .chat-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+        .pulse-btn { animation: pulse-ring 2s infinite; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- Top Demo Banner -->
+    <div class="bg-slate-900 text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium">
+        ⚡ <span class="text-emerald-400 font-bold">LIVE INTERACTIVE DEMO:</span> Click the <span class="underline font-semibold">24/7 AI WhatsApp Receptionist</span> at the bottom-right to test live appointment booking!
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-30 border-b border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-xl bg-teal-600 text-white flex items-center justify-center font-extrabold text-lg shadow-sm">A</div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight text-slate-900 block leading-none">AURELIA</span>
+                    <span class="text-[10px] tracking-widest uppercase text-teal-600 font-semibold">Dental & Aesthetics</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#treatments" class="hover:text-teal-600 transition">Treatments</a>
+                <a href="#results" class="hover:text-teal-600 transition">Reviews (4.9★)</a>
+                <a href="#location" class="hover:text-teal-600 transition">DLF Phase 4, Gurugram</a>
+            </div>
+            <button onclick="openChatWithPrompt('I want to book a consultation')" class="bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-sm transition cursor-pointer">
+                Book Slot (AI)
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-teal-950 via-slate-900 to-slate-950 text-white py-16 sm:py-24 px-4">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-teal-500/15 border border-teal-400/30 text-teal-300 text-xs font-semibold px-3.5 py-1.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    Galleria Market & Golf Course Road's #1 Rated Studio
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                    Precision Smile Design & <span class="text-teal-400">Advanced Skin Aesthetics</span>
+                </h1>
+                <p class="text-slate-300 text-base sm:text-lg max-w-xl leading-relaxed">
+                    Zero waiting time. Instant 24/7 WhatsApp slot confirmation. Painless German-technology dental implants, invisible aligners & laser skin treatments.
+                </p>
+                <div class="flex flex-wrap gap-3 pt-2">
+                    <button onclick="openChatWithPrompt('Hi, I want to book an appointment')" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-500/20 transition flex items-center gap-2 cursor-pointer">
+                        <span>💬 Chat with AI Receptionist</span>
+                    </button>
+                    <button onclick="openChatWithPrompt('What are your treatment prices?')" class="bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold px-6 py-3.5 rounded-xl transition cursor-pointer">
+                        Check Instant Pricing
+                    </button>
+                </div>
+                <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 max-w-md">
+                    <div>
+                        <p class="text-2xl font-extrabold text-white">4.9 ★</p>
+                        <p class="text-xs text-slate-400">680+ Google Reviews</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-extrabold text-teal-400">&lt; 10 sec</p>
+                        <p class="text-xs text-slate-400">AI Slot Confirmation</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-extrabold text-white">24/7</p>
+                        <p class="text-xs text-slate-400">Instant Lead Capture</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Live Booking Preview Card -->
+            <div class="lg:col-span-5">
+                <div class="bg-white text-slate-900 rounded-2xl p-6 shadow-2xl border border-slate-200">
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Live Appointment Feed</span>
+                            <h3 class="font-bold text-lg text-slate-900">Recent AI-Booked Slots</h3>
+                        </div>
+                        <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-full">● Live Sync</span>
+                    </div>
+                    <div id="live-bookings-list" class="space-y-3 my-4">
+                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+                            <div>
+                                <p class="font-semibold text-sm">Rohan Malhotra</p>
+                                <p class="text-xs text-slate-500">Invisible Aligners Consult • Tomorrow, 5:00 PM</p>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded">Confirmed</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+                            <div>
+                                <p class="font-semibold text-sm">Ananya Kapoor</p>
+                                <p class="text-xs text-slate-500">HydraFacial & Laser • Tomorrow, 12:30 PM</p>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded">Confirmed</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 text-center">
+                        Test the chat widget on the bottom right — your booked slot will appear right here live!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Section -->
+    <section id="treatments" class="max-w-6xl mx-auto py-16 px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">High-Demand Clinical Treatments</h2>
+            <p class="text-slate-600 mt-2 text-sm sm:text-base">Click any treatment below to test how the AI Receptionist qualifies the patient and books their appointment.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+                <span class="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1 rounded-full">Dental Implants</span>
+                <h3 class="font-bold text-lg mt-4">Swiss & German Dental Implants</h3>
+                <p class="text-sm text-slate-600 mt-2">Single-sitting painless implants with 3D CBCT scan and lifetime warranty.</p>
+                <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span class="font-bold text-slate-900">From ₹25,000</span>
+                    <button onclick="openChatWithPrompt('I want to know about Dental Implants')" class="text-sm font-bold text-teal-600 hover:underline cursor-pointer">Ask AI & Book →</button>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+                <span class="text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Smile Makeover</span>
+                <h3 class="font-bold text-lg mt-4">Clear Invisible Aligners</h3>
+                <p class="text-sm text-slate-600 mt-2">Digital 3D smile preview before starting treatment. Zero metal braces.</p>
+                <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span class="font-bold text-slate-900">From ₹45,000</span>
+                    <button onclick="openChatWithPrompt('Tell me about Invisible Aligners cost and slots')" class="text-sm font-bold text-teal-600 hover:underline cursor-pointer">Ask AI & Book →</button>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+                <span class="text-xs font-bold text-rose-600 bg-rose-50 px-3 py-1 rounded-full">Skin & Laser</span>
+                <h3 class="font-bold text-lg mt-4">FDA-Approved Laser & HydraFacial</h3>
+                <p class="text-sm text-slate-600 mt-2">Permanent laser hair reduction, anti-aging skin tightening & glow therapies.</p>
+                <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span class="font-bold text-slate-900">From ₹4,500</span>
+                    <button onclick="openChatWithPrompt('I want to book a Laser Skin session')" class="text-sm font-bold text-teal-600 hover:underline cursor-pointer">Ask AI & Book →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="location" class="bg-slate-900 text-slate-400 py-10 px-4 text-center text-xs sm:text-sm">
+        <p class="text-white font-semibold">Aurelia Dental & Aesthetics • Galleria Boulevard, DLF Phase 4, Gurugram</p>
+        <p class="mt-1">Demo Powered by <span class="text-teal-400 font-bold">Kalki AI Growth Studio</span> • Automated 24/7 Lead Capture & Calendar Sync</p>
+    </footer>
+
+    <!-- Floating AI Chat Widget Button -->
+    <div class="fixed bottom-5 right-5 z-50 flex flex-col items-end">
+        <!-- Chat Window -->
+        <div id="ai-chat-window" class="w-[340px] sm:w-[380px] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden mb-3 flex flex-col transition-all duration-200">
+            <!-- Header -->
+            <div class="bg-emerald-700 text-white p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg">🤖</div>
+                    <div>
+                        <h4 class="font-bold text-sm leading-tight">Riya • 24/7 AI Receptionist</h4>
+                        <p class="text-[11px] text-emerald-100 flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-300 inline-block"></span> Online • Replies in 2 sec
+                        </p>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="text-white/80 hover:text-white text-xl font-bold px-2 cursor-pointer">×</button>
+            </div>
+
+            <!-- Messages Area -->
+            <div id="chat-messages" class="p-4 h-80 overflow-y-auto space-y-3 bg-[#efeae2] chat-scroll text-sm">
+                <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm max-w-[85%] text-slate-800">
+                    Namaste! 👋 Welcome to <b>Aurelia Dental & Aesthetics (DLF Phase 4)</b>. Main Riya hoon, aapki 24/7 AI Assistant.
+                    <br><br>Aap kis treatment ke liye inquiry kar rahe hain, ya main aapka <b>appointment slot</b> book karun?
+                </div>
+            </div>
+
+            <!-- Quick Reply Chips -->
+            <div class="bg-slate-50 px-3 py-2 border-t border-slate-200 flex gap-1.5 overflow-x-auto">
+                <button onclick="sendQuickReply('Book appointment for tomorrow')" class="whitespace-nowrap text-xs bg-white border border-slate-300 hover:border-emerald-600 text-slate-700 px-2.5 py-1 rounded-full cursor-pointer">📅 Book Slot</button>
+                <button onclick="sendQuickReply('Dental Implants price?')" class="whitespace-nowrap text-xs bg-white border border-slate-300 hover:border-emerald-600 text-slate-700 px-2.5 py-1 rounded-full cursor-pointer">🦷 Implants Cost</button>
+                <button onclick="sendQuickReply('Clinic timing & address?')" class="whitespace-nowrap text-xs bg-white border border-slate-300 hover:border-emerald-600 text-slate-700 px-2.5 py-1 rounded-full cursor-pointer">📍 Location</button>
+            </div>
+
+            <!-- Input Box -->
+            <form onsubmit="handleUserSubmit(event)" class="p-2.5 bg-white border-t border-slate-200 flex gap-2">
+                <input id="chat-input" type="text" placeholder="Type message (e.g. Kal 5 PM slot chahiye)..." class="flex-1 text-sm bg-slate-100 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600" autocomplete="off">
+                <button type="submit" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2 rounded-full text-sm transition cursor-pointer">Send</button>
+            </form>
+        </div>
+
+        <!-- Toggle Button -->
+        <button id="chat-toggle-btn" onclick="toggleChat()" class="pulse-btn bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-3.5 rounded-full shadow-xl flex items-center gap-2.5 cursor-pointer">
+            <span class="text-lg">💬</span>
+            <span class="text-sm">Test AI Receptionist</span>
+        </button>
+    </div>
+
+    <script>
+        let bookingStep = 0;
+        let leadData = { treatment: 'Dental / Skin Consultation', time: 'Tomorrow, 5:00 PM', name: '' };
+
+        const chatWindow = document.getElementById('ai-chat-window');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInput = document.getElementById('chat-input');
+
+        function toggleChat() {
+            chatWindow.classList.toggle('hidden');
+        }
+
+        function openChatWithPrompt(text) {
+            chatWindow.classList.remove('hidden');
+            processUserMessage(text);
+        }
+
+        function sendQuickReply(text) {
+            processUserMessage(text);
+        }
+
+        function handleUserSubmit(e) {
+            e.preventDefault();
+            const text = chatInput.value.trim();
+            if (!text) return;
+            chatInput.value = '';
+            processUserMessage(text);
+        }
+
+        function appendMessage(html, isUser = false) {
+            const div = document.createElement('div');
+            div.className = isUser
+                ? 'bg-[#dcf8c6] p-3 rounded-2xl rounded-tr-none shadow-sm max-w-[85%] ml-auto text-slate-900'
+                : 'bg-white p-3 rounded-2xl rounded-tl-none shadow-sm max-w-[85%] text-slate-800';
+            div.innerHTML = html;
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function processUserMessage(text) {
+            appendMessage(text, true);
+
+            const typingId = 'typing-' + Date.now();
+            const typingDiv = document.createElement('div');
+            typingDiv.id = typingId;
+            typingDiv.className = 'bg-white/80 px-3 py-2 rounded-2xl text-xs text-slate-500 italic w-fit';
+            typingDiv.innerText = 'Riya is typing...';
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            setTimeout(() => {
+                document.getElementById(typingId)?.remove();
+                const reply = generateSmartReply(text);
+                appendMessage(reply, false);
+            }, 650);
+        }
+
+        function generateSmartReply(input) {
+            const msg = input.toLowerCase();
+
+            if (bookingStep === 1) {
+                leadData.time = input;
+                bookingStep = 2;
+                return `Perfect! <b>${input}</b> ka slot available hai. ✅<br><br>Confirm karne ke liye bas apna <b>Full Name</b> aur <b>WhatsApp Number</b> likh dijiye:`;
+            }
+
+            if (bookingStep === 2) {
+                leadData.name = input;
+                bookingStep = 0;
+                addLiveBookingCard(leadData.name, leadData.treatment, leadData.time);
+                return `🎉 <b>Appointment Confirmed!</b><br><br>👤 <b>Patient:</b> ${leadData.name}<br>🏥 <b>Service:</b> ${leadData.treatment}<br>⏰ <b>Slot:</b> ${leadData.time}<br>📍 <b>Location:</b> Galleria Boulevard, DLF Phase 4<br><br><i>(Demo Note: Real clinic setup mein aapke WhatsApp aur Google Calendar par instant confirmation chala jayega!)</i>`;
+            }
+
+            if (msg.includes('price') || msg.includes('cost') || msg.includes('implant') || msg.includes('aligner') || msg.includes('laser')) {
+                if (msg.includes('implant')) leadData.treatment = 'Dental Implants Consult';
+                else if (msg.includes('aligner')) leadData.treatment = 'Invisible Aligners';
+                else if (msg.includes('laser')) leadData.treatment = 'Laser Skin Session';
+
+                bookingStep = 1;
+                return `Hamare standard packages:<br>• <b>Dental Implants:</b> ₹25,000 se start<br>• <b>Invisible Aligners:</b> ₹45,000 se start<br>• <b>Laser / HydraFacial:</b> ₹4,500 se start<br><br>Doctor ke saath free 3D scan & consultation ke liye <b>kaunsa day/time</b> aapko suit karega? (e.g. <i>Kal 5 PM</i>)`;
+            }
+
+            if (msg.includes('location') || msg.includes('address') || msg.includes('timing')) {
+                return `📍 <b>Address:</b> Galleria Boulevard, DLF Phase 4, Gurugram (Valet Parking available).<br>🕒 <b>Timings:</b> Mon–Sun, 10:00 AM – 8:30 PM.<br><br>Kya main aapka slot book kar dun?`;
+            }
+
+            if (msg.includes('book') || msg.includes('slot') || msg.includes('appointment') || msg.includes('haan') || msg.includes('yes')) {
+                bookingStep = 1;
+                return `Zaroor! Main abhi slot check kar deti hoon. 😊<br><br>Aapko <b>kaunse din aur kis time</b> ka appointment chahiye? (e.g. <i>Tomorrow 4 PM</i> ya <i>Saturday 11 AM</i>)`;
+            }
+
+            bookingStep = 1;
+            return `Bilkul! Main aapki help kar sakti hoon. 😊<br><br>Kya aap <b>Dental</b> ya <b>Skin/Laser</b> consultation ke liye slot dekh rahe hain? Bas apna preferred time bata dijiye (e.g. <i>Kal shaam 5 baje</i>).`;
+        }
+
+        function addLiveBookingCard(name, treatment, time) {
+            const list = document.getElementById('live-bookings-list');
+            const card = document.createElement('div');
+            card.className = 'p-3 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-between transition-all';
+            card.innerHTML = `
+                <div>
+                    <p class="font-bold text-sm text-slate-900">${name} <span class="text-[10px] bg-emerald-600 text-white px-1.5 py-0.5 rounded ml-1">NEW</span></p>
+                    <p class="text-xs text-slate-600">${treatment} • ${time}</p>
+                </div>
+                <span class="text-xs font-bold text-emerald-700 bg-white px-2 py-1 rounded border border-emerald-200">Synced</span>
+            `;
+            list.prepend(card);
+        }
+    </script>
+</body>
+</html>
